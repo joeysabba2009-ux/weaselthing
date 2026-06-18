@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop Weasel Emporium | Knoxville's Premier Vintage & Kitsch</title>
+    <title>Pop Weasel Emporium | Knoxville Vintage, Toys & Kitsch</title>
     <meta name="description" content="Eclectic vintage, retro toys, and pop culture oddities located near UTK in Knoxville, TN.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-stone-50 text-stone-900 font-sans antialiased">
 
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <span class="text-3xl font-black text-purple-800 tracking-tighter uppercase drop-shadow-sm">Pop Weasel</span>
+                    <span class="text-3xl font-black text-purple-800 tracking-tighter uppercase">Pop Weasel</span>
                 </div>
                 
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="text-stone-600 hover:text-purple-700 font-semibold transition-colors">Our Story</a>
                     <a href="#inventory" class="text-stone-600 hover:text-purple-700 font-semibold transition-colors">Inventory</a>
+                    <a href="#faq" class="text-stone-600 hover:text-purple-700 font-semibold transition-colors">FAQs</a>
                     <a href="#visit" class="bg-purple-700 text-white px-6 py-2 rounded-full font-bold hover:bg-purple-800 hover:shadow-md transition-all">Visit Us</a>
                 </div>
 
@@ -39,95 +42,128 @@
             <div class="px-4 pt-2 pb-6 space-y-2 text-center">
                 <a href="#about" class="block px-3 py-3 text-stone-600 font-semibold hover:bg-stone-50 rounded-md">Our Story</a>
                 <a href="#inventory" class="block px-3 py-3 text-stone-600 font-semibold hover:bg-stone-50 rounded-md">Inventory</a>
+                <a href="#faq" class="block px-3 py-3 text-stone-600 font-semibold hover:bg-stone-50 rounded-md">FAQs</a>
                 <a href="#visit" class="block px-3 py-3 text-purple-700 font-bold hover:bg-stone-50 rounded-md">Visit Us</a>
             </div>
         </div>
     </nav>
 
     <header class="relative h-screen flex items-center justify-center hero-image-container overflow-hidden">
-        <div class="absolute inset-0 bg-black/60 z-10"></div>
-        
-        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto transform translate-y-10">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+            <span class="bg-purple-700 text-white text-xs uppercase tracking-widest font-bold px-4 py-1.5 rounded-full mb-4 inline-block">Knoxville, TN</span>
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
                 Curated Kitsch Near UTK
             </h1>
             <p class="text-xl md:text-2xl text-stone-200 mb-10 font-light drop-shadow-md">
                 Knoxville's sanctuary for the weird, the wonderful, and the truly vintage.
             </p>
-            <a href="#inventory" class="inline-block bg-white text-purple-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 hover:scale-105 transition-transform duration-300 shadow-xl">
+            <a href="#inventory" class="inline-block bg-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-700 hover:scale-105 transition-transform duration-300 shadow-xl">
                 Explore the Emporium
             </a>
         </div>
     </header>
 
     <section id="about" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <i class="fa-solid fa-store text-5xl text-purple-300 mb-6"></i>
-            <h2 class="text-4xl font-bold mb-8 text-stone-800">Not Your Average Antique Mall</h2>
-            <p class="text-lg text-stone-600 leading-relaxed mb-6">
-                Just a stone's throw from the University of Tennessee, Pop Weasel Emporium isn't just a store—it's a treasure hunt. We source items that have character, history, and a touch of the bizarre. 
-            </p>
-            <p class="text-lg text-stone-600 leading-relaxed">
-                Whether you're decorating a dorm, a studio apartment, or hunting for a nostalgic gift, our constantly rotating stock means you'll never step into the same shop twice.
-            </p>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <i class="fa-solid fa-store text-5xl text-purple-600 mb-6"></i>
+                <h2 class="text-4xl font-bold mb-6 text-stone-800">Not Your Average Antique Mall</h2>
+                <p class="text-lg text-stone-600 leading-relaxed mb-6">
+                    Just a stone's throw from the University of Tennessee campus, Pop Weasel Emporium isn't just a store—it's an interactive treasure hunt. We hand-source unique items with character, history, and a touch of the bizarre.
+                </p>
+                <p class="text-lg text-stone-600 leading-relaxed">
+                    Whether you are upgrading a local apartment, hunting for nostalgic mid-century decor, or grabbing a truly weird gift, our rotating layout ensures you'll explore something new every visit.
+                </p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=800');"></div>
         </div>
     </section>
 
     <section id="inventory" class="py-24 bg-stone-100">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-stone-800 mb-4">What You'll Find</h2>
-                <div class="h-1 w-24 bg-purple-600 mx-auto rounded-full"></div>
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-stone-800 mb-4">Inside the Shop</h2>
+                <p class="text-stone-600 max-w-xl mx-auto">Click a category below to filter down a quick glimpse of what we regularly keep stocked on our shelves.</p>
+                <div class="h-1 w-24 bg-purple-600 mx-auto rounded-full mt-4"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-                    <div class="h-48 bg-purple-100 flex items-center justify-center group-hover:bg-purple-200 transition-colors">
-                        <i class="fa-solid fa-couch text-6xl text-purple-600"></i>
-                    </div>
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-bold mb-3 text-stone-800">Mid-Century & Decor</h3>
-                        <p class="text-stone-600">Statement pieces, vintage lamps, and authentic furniture from the atomic age.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-                    <div class="h-48 bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-200 transition-colors">
-                        <i class="fa-solid fa-robot text-6xl text-yellow-600"></i>
-                    </div>
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-bold mb-3 text-stone-800">Retro Toys & Media</h3>
-                        <p class="text-stone-600">Action figures, classic vinyl, VHS tapes, and nostalgia that hits right in the feels.</p>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-purple-700 text-white px-6 py-2 rounded-full font-semibold transition-all shadow-sm" data-filter="all">All Items</button>
+                <button class="filter-btn bg-white text-stone-700 hover:bg-stone-200 px-6 py-2 rounded-full font-semibold transition-all shadow-sm" data-filter="decor">Decor & Furniture</button>
+                <button class="filter-btn bg-white text-stone-700 hover:bg-stone-200 px-6 py-2 rounded-full font-semibold transition-all shadow-sm" data-filter="toys">Retro Toys</button>
+                <button class="filter-btn bg-white text-stone-700 hover:bg-stone-200 px-6 py-2 rounded-full font-semibold transition-all shadow-sm" data-filter="oddities">Art & Oddities</button>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+                <div class="gallery-item bg-white rounded-xl shadow-sm overflow-hidden group transition-all duration-300" data-category="decor">
+                    <div class="h-64 overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600');"></div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600">Decor</span>
+                        <h3 class="text-xl font-bold mt-1 text-stone-800">Mid-Century Lamps</h3>
                     </div>
                 </div>
-
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-                    <div class="h-48 bg-teal-100 flex items-center justify-center group-hover:bg-teal-200 transition-colors">
-                        <i class="fa-solid fa-masks-theater text-6xl text-teal-600"></i>
+                <div class="gallery-item bg-white rounded-xl shadow-sm overflow-hidden group transition-all duration-300" data-category="toys">
+                    <div class="h-64 overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&q=80&w=600');"></div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase tracking-wider text-yellow-600">Retro Toys</span>
+                        <h3 class="text-xl font-bold mt-1 text-stone-800">Classic Collectibles</h3>
                     </div>
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-bold mb-3 text-stone-800">Art & Oddities</h3>
-                        <p class="text-stone-600">Taxidermy, weird art, enamel pins, and unique conversation starters.</p>
+                </div>
+                <div class="gallery-item bg-white rounded-xl shadow-sm overflow-hidden group transition-all duration-300" data-category="oddities">
+                    <div class="h-64 overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&q=80&w=600');"></div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Oddities</span>
+                        <h3 class="text-xl font-bold mt-1 text-stone-800">Eclectic Art & Media</h3>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="visit" class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-stone-800 mb-4">Frequently Asked Questions</h2>
+                <div class="h-1 w-24 bg-purple-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="border border-stone-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 font-bold text-lg text-stone-800 flex justify-between items-center bg-stone-50 hover:bg-stone-100 transition-colors">
+                        <span>Do you buy vintage items from individuals?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 text-stone-600 bg-white border-t border-stone-100">
+                        Yes! We are always hunting for unique inventory. Reach out via social media or bring your collection down during shop hours for consideration.
+                    </div>
+                </div>
+
+                <div class="border border-stone-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 font-bold text-lg text-stone-800 flex justify-between items-center bg-stone-50 hover:bg-stone-100 transition-colors">
+                        <span>Where exactly are you located near UTK?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 text-stone-600 bg-white border-t border-stone-100">
+                        We are located right at 611 N Gay St, an easy walk or very quick ride down from standard student housing zones and campus.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="visit" class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="text-4xl font-bold mb-8 text-stone-800">Come Dig Through the Crates</h2>
-                
-                <div class="space-y-6">
+                <div class="space-y-6 mb-8">
                     <div class="flex items-start space-x-4">
                         <i class="fa-solid fa-location-dot text-2xl text-purple-600 mt-1"></i>
                         <div>
                             <h4 class="font-bold text-lg text-stone-800">Address</h4>
-                            <p class="text-stone-600">611 N Gay St<br>Knoxville, TN 37917</p>
+                            <p class="text-stone-600">611 N Gay St, Knoxville, TN 37917</p>
                         </div>
                     </div>
-                    
                     <div class="flex items-start space-x-4">
                         <i class="fa-solid fa-clock text-2xl text-purple-600 mt-1"></i>
                         <div>
@@ -136,17 +172,14 @@
                         </div>
                     </div>
                 </div>
+                <a href="https://maps.google.com" target="_blank" class="inline-block bg-stone-800 text-white px-6 py-3 rounded-xl hover:bg-stone-900 transition-colors">Open in Google Maps</a>
             </div>
             
-            <div class="bg-stone-200 rounded-2xl h-80 flex items-center justify-center shadow-inner relative overflow-hidden">
-                <i class="fa-solid fa-map-location-dot text-6xl text-stone-400 z-10"></i>
-                <div class="absolute inset-0 bg-stone-200 opacity-50"></div>
-                <p class="absolute bottom-4 text-stone-500 text-sm z-10">Map Embed Goes Here</p>
-            </div>
+            <div id="map" class="rounded-2xl h-96 shadow-md border border-stone-200 z-10"></div>
         </div>
     </section>
 
-    <footer class="bg-stone-900 text-stone-400 py-10 text-center">
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center">
         <div class="max-w-4xl mx-auto px-6">
             <h3 class="text-2xl font-black text-white uppercase tracking-tighter mb-4">Pop Weasel</h3>
             <div class="flex justify-center space-x-6 mb-8">
@@ -155,11 +188,12 @@
             </div>
             <p class="text-sm">
                 &copy; 2026 Pop Weasel Emporium. All rights reserved. <br>
-                <span class="text-purple-400">Designed & Developed by a GSSE Scholar.</span>
+                <span class="text-purple-400 font-medium">Designed & Code-Optimized by a GSSE Portfolio Scholar.</span>
             </p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 </html>
