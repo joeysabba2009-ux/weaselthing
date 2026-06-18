@@ -1,21 +1,14 @@
-/* Custom Portfolio Enhancements */
+/* Custom Portfolio Enhancements for Pop Weasel */
 
 .hero-image-container {
-    /* Uses a highly stylized atmospheric vintage record shop fallback image */
+    /* This is a reliable, high-quality fallback image that will load instantly from the web */
     background-image: url('https://images.unsplash.com/photo-1532635241-17e820add50f?auto=format&fit=crop&q=80&w=1600&h=900');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
 }
 
-/* Fallback logic if you put a localized file path into your repo later */
-@document url-prefix() {
-    .hero-image-container {
-        background-image: url('images/storefront.jpg');
-    }
-}
-
-/* Scroll Design styling */
+/* Custom scrollbar to match the Pop Weasel aesthetic */
 ::-webkit-scrollbar {
     width: 10px;
 }
