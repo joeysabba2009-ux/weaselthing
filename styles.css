@@ -1,8 +1,8 @@
 /* Custom Portfolio Enhancements for Pop Weasel */
 
 .hero-image-container {
-    /* This is a reliable, high-quality fallback image that will load instantly from the web */
-    background-image: url('https://images.unsplash.com/photo-1532635241-17e820add50f?auto=format&fit=crop&q=80&w=1600&h=900');
+    /* Points directly to your uploaded photo in the images folder */
+    background-image: url('images/storefront.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
