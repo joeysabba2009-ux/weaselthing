@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Weasel Emporium | Knoxville's Premier Vintage & Kitsch</title>
+    <meta name="description" content="Eclectic vintage, retro toys, and pop culture oddities located near UTK in Knoxville, TN.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-stone-900 font-sans antialiased">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="text-3xl font-black text-purple-800 tracking-tighter uppercase drop-shadow-sm">Pop Weasel</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-stone-600 hover:text-purple-700 font-semibold transition-colors">Our Story</a>
+                    <a href="#inventory" class="text-stone-600 hover:text-purple-700 font-semibold transition-colors">Inventory</a>
+                    <a href="#visit" class="bg-purple-700 text-white px-6 py-2 rounded-full font-bold hover:bg-purple-800 hover:shadow-md transition-all">Visit Us</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-stone-600 hover:text-purple-700 focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#about" class="block px-3 py-3 text-stone-600 font-semibold hover:bg-stone-50 rounded-md">Our Story</a>
+                <a href="#inventory" class="block px-3 py-3 text-stone-600 font-semibold hover:bg-stone-50 rounded-md">Inventory</a>
+                <a href="#visit" class="block px-3 py-3 text-purple-700 font-bold hover:bg-stone-50 rounded-md">Visit Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center hero-image-container overflow-hidden">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto transform translate-y-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
+                Curated Kitsch Near UTK
+            </h1>
+            <p class="text-xl md:text-2xl text-stone-200 mb-10 font-light drop-shadow-md">
+                Knoxville's sanctuary for the weird, the wonderful, and the truly vintage.
+            </p>
+            <a href="#inventory" class="inline-block bg-white text-purple-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 hover:scale-105 transition-transform duration-300 shadow-xl">
+                Explore the Emporium
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <i class="fa-solid fa-store text-5xl text-purple-300 mb-6"></i>
+            <h2 class="text-4xl font-bold mb-8 text-stone-800">Not Your Average Antique Mall</h2>
+            <p class="text-lg text-stone-600 leading-relaxed mb-6">
+                Just a stone's throw from the University of Tennessee, Pop Weasel Emporium isn't just a store—it's a treasure hunt. We source items that have character, history, and a touch of the bizarre. 
+            </p>
+            <p class="text-lg text-stone-600 leading-relaxed">
+                Whether you're decorating a dorm, a studio apartment, or hunting for a nostalgic gift, our constantly rotating stock means you'll never step into the same shop twice.
+            </p>
+        </div>
+    </section>
+
+    <section id="inventory" class="py-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-stone-800 mb-4">What You'll Find</h2>
+                <div class="h-1 w-24 bg-purple-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                        <i class="fa-solid fa-couch text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-3 text-stone-800">Mid-Century & Decor</h3>
+                        <p class="text-stone-600">Statement pieces, vintage lamps, and authentic furniture from the atomic age.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-200 transition-colors">
+                        <i class="fa-solid fa-robot text-6xl text-yellow-600"></i>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-3 text-stone-800">Retro Toys & Media</h3>
+                        <p class="text-stone-600">Action figures, classic vinyl, VHS tapes, and nostalgia that hits right in the feels.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="h-48 bg-teal-100 flex items-center justify-center group-hover:bg-teal-200 transition-colors">
+                        <i class="fa-solid fa-masks-theater text-6xl text-teal-600"></i>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-3 text-stone-800">Art & Oddities</h3>
+                        <p class="text-stone-600">Taxidermy, weird art, enamel pins, and unique conversation starters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="visit" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-8 text-stone-800">Come Dig Through the Crates</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fa-solid fa-location-dot text-2xl text-purple-600 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-stone-800">Address</h4>
+                            <p class="text-stone-600">611 N Gay St<br>Knoxville, TN 37917</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <i class="fa-solid fa-clock text-2xl text-purple-600 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-stone-800">Hours</h4>
+                            <p class="text-stone-600">Thursday - Saturday: 12:00 PM - 7:00 PM<br>Sunday - Wednesday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-stone-200 rounded-2xl h-80 flex items-center justify-center shadow-inner relative overflow-hidden">
+                <i class="fa-solid fa-map-location-dot text-6xl text-stone-400 z-10"></i>
+                <div class="absolute inset-0 bg-stone-200 opacity-50"></div>
+                <p class="absolute bottom-4 text-stone-500 text-sm z-10">Map Embed Goes Here</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-stone-400 py-10 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-2xl font-black text-white uppercase tracking-tighter mb-4">Pop Weasel</h3>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-stone-400 hover:text-white text-2xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-stone-400 hover:text-white text-2xl transition-colors"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <p class="text-sm">
+                &copy; 2026 Pop Weasel Emporium. All rights reserved. <br>
+                <span class="text-purple-400">Designed & Developed by a GSSE Scholar.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
