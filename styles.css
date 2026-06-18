@@ -1,32 +1,37 @@
-/* Custom Styles for Pop Weasel Emporium */
+/* Custom Portfolio Enhancements */
 
-/* Hero Background Setup */
 .hero-image-container {
-    /* This looks for a picture inside your images folder. 
-       Make sure the spelling here matches your actual image file name exactly! 
-    */
-    background-image: url('images/storefront.jpg');
+    /* Uses a highly stylized atmospheric vintage record shop fallback image */
+    background-image: url('https://images.unsplash.com/photo-1532635241-17e820add50f?auto=format&fit=crop&q=80&w=1600&h=900');
     background-size: cover;
     background-position: center;
-    
-    /* This adds a professional "parallax" effect where the image stays still while you scroll */
     background-attachment: fixed; 
 }
 
-/* Custom scrollbar to make it look less generic */
+/* Fallback logic if you put a localized file path into your repo later */
+@document url-prefix() {
+    .hero-image-container {
+        background-image: url('images/storefront.jpg');
+    }
+}
+
+/* Scroll Design styling */
 ::-webkit-scrollbar {
     width: 10px;
 }
-
 ::-webkit-scrollbar-track {
     background: #f5f5f4; 
 }
-
 ::-webkit-scrollbar-thumb {
     background: #7e22ce; 
     border-radius: 5px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #581c87; 
+}
+
+/* Animation utilities for the dynamic list filters */
+.gallery-item.hidden-item {
+    display: none;
+    opacity: 0;
 }
